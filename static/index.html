@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /*top:vertical section*/
+        .themoviedb {
+            color: red;
+            font-size: 20px;
+            background: linear-gradient(to left, #c21d1d, #000 25%);
+            /*height: 20px; */
+            padding-left: 10px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+
+
+        /*The 2 left tabs */
+        .just_tab {
+            margin-left: 130px;
+            float: left;
+        }
+
+        #the_default_tab {
+            float: left;
+        }
+
+        #non_default_tab {
+            float: left;
+            clear: left;
+        }
+
+        .just_tab button {
+            color: white;
+            background-color: #000000;
+            border: none;
+            cursor: pointer;
+            padding-left: 15px;
+            padding-right: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            outline: none;
+
+        }
+
+        .just_tab button:hover {
+            color: red;
+            border: none;
+        }
+
+        .just_tab button.clicked_now {
+            color: red;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+
+        /*mid of mid:both the sections cover div*/
+        .sections {
+            float: left;
+        }
+
+
+
+        /*mid of mid :inline the sections div */
+        .home_search_section {
+            float: left;
+        }
+
+        /*2nd page mid :add results here: parent div:area same as above*/
+        .parent_div {
+            min-height: 650px;
+            width: 1000px;
+            padding-left: 10px;
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /*inside the 2nd page mid top div: decoration*/
+        .page2_2 {
+            background: linear-gradient(#c21d1d, #000000 80%);
+            /***/
+            height: 260px;
+            text-align: center;
+        }
+
+        #search_title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* the two i/p on 2nd page*/
+        .two_input {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .redstar {
+            color: red;
+        }
+
+        /*labels*/
+        .the_two_words {
+            font-size: 15px;
+
+        }
+
+        .radio_radius {
+            border-radius: 5px;
+            border: none;
+            height: 19px;
+
+        }
+
+        /*Buttons on 2nd page*/
+        .select_buttons button {
+            color: #ffffff;
+            background-color: #000000;
+            box-shadow: none;
+            border-radius: 4px;
+            border: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+
+        .select_buttons #clear {
+            padding-left: 12px;
+            padding-right: 12px;
+            margin-left: 20px;
+        }
+
+        .select_buttons #button_search {
+            margin-right: 20px;
+        }
+
+        .select_buttons button:hover {
+            background-color: rgb(212, 0, 0);
+        }
+
+        /*results*/
+        .cards_search {
+            height: 295px;
+            border-left: 7px solid red;
+            overflow: hidden;
+            margin-bottom: 17px;
+        }
+
+        .Poster_path_search_display {
+            float: left;
+            padding-left: 7px;
+            margin-top: 8.5px;
+            margin-bottom: 8.5px;
+
+        }
+
+        .right_side {
+            padding-left: 220px;
+
+        }
+
+        #Title_s {
+            font-size: 25px;
+            font-weight: 700;
+            padding-top: 25px;
+
+        }
+
+        #line2_dec {
+            padding-top: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            padding-bottom: 5px;
+
+        }
+
+        #STAR {
+            display: inline-block;
+            padding-left: 29px;
+            color: red;
+            font-size: 14px;
+
+        }
+
+        #l3part1 {
+            display: inline-block;
+            color: red;
+            font-size: 14px;
+            vertical-align: text-bottom;
+
+
+        }
+
+        #l3part2 {
+            display: inline-block;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            vertical-align: text-top;
+            line-height: 8px;
+
+        }
+
+        #over_style {
+            padding-top: 25px;
+            padding-left: 29px;
+            padding-right: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+        }
+
+        #button_for_show {
+            margin-left: 29px;
+            margin-top: 13px;
+            border: none;
+            border-radius: 3px;
+            color: rgba(255, 255, 255, 0.8);
+            padding-left: 6px;
+            padding-right: 6px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #c21d1d;
+        }
+
+        #button_for_show:hover {
+            background-color: rgba(230, 230, 230, 1);
+        }
+
+        #show_results_ {
+            height: 30px;
+        }
+
+        #no_result_display {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .end_credits {
+
+            clear: both;
+            position: relative;
+            font-size: 14px;
+            margin-left: 270px;
+            padding-left: 20px;
+            background-color: rgb(85, 2, 2);
+            margin-right: 10px;
+            padding: 5px;
+            text-align: right;
+            margin-bottom: 5px;
+        }
+
+        #div2 {
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+            overflow: auto;
+
+        }
+
+        #div3 {
+            overflow: auto;
+            margin-left: 320px;
+            background-color: rgba(200, 200, 200, 1);
+            width: 830px;
+            margin-top: 60px;
+            min-height: 600px;
+            padding-left: 30px;
+            padding-top: 20px;
+            color: #ffffff;
+        }
+
+        #Backdrop_path_search_display {
+            display: inline-block;
+        }
+
+        #close_design {
+            border: none;
+            cursor: pointer;
+            color: #998f8f;
+            padding-left: 18px;
+            float: right;
+            margin-right: 20px;
+            font-size: 20px;
+            font-weight: 700;
+
+        }
+
+        #close_design:hover {
+            color: #000000;
+        }
+
+        #Title_display_Popup {
+            display: inline-block;
+            color: #000000;
+            font-size: 25px;
+            padding-top: 10px;
+        }
+
+        #info_button {
+            display: inline-block;
+            padding-left: 3px;
+
+        }
+
+        #info_button_display {
+            color: rgb(224, 71, 71);
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        #REL_GEN_STYLE {
+            color: #000000;
+            font-size: 16px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-weight: 580;
+        }
+
+        #STAR_POPUP {
+            display: inline-block;
+            color: rgb(182, 8, 8);
+            font-size: 14px;
+        }
+
+        #avg_popup {
+            display: inline-block;
+            color: rgb(163, 15, 15);
+            font-size: 14px;
+            vertical-align: text-bottom;
+        }
+
+        #total_votes_popup_style {
+            display: inline-block;
+            font-size: 14px;
+            color: #000000;
+            vertical-align: text-top;
+            line-height: 8px;
+        }
+
+        #over_popup_display {
+            padding-top: 30px;
+            padding-bottom: 10px;
+            color: #000000;
+            padding-right: 41px;
+        }
+
+        #spoken_lang {
+            color: #000000;
+            font-style: italic;
+        }
+
+        #cast_word {
+            padding-top: 30px;
+            color: #000000;
+            padding-bottom: 10px;
+            font-weight: bolder;
+        }
+
+        #actor_container_style {
+            display: inline-block;
+        }
+
+        #child_actor_style {
+            display: inline-block;
+            max-width: 185px;
+            padding-right: 12px;
+        }
+
+        #character_name_style {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        #actor_name_style {
+            font-weight: bolder;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .three_texts {
+            color: #000000;
+            text-align: center;
+
+        }
+
+        #Review_word_style {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            color: #000000;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        #each_review_style {
+            display: block;
+
+        }
+
+        #review_username_style {
+            display: inline-block;
+            color: #000000;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        #review_on_date_style {
+            display: inline-block;
+            color: #000000;
+        }
+
+        #rating_style {
+            color: #c21d1d;
+        }
+
+        #review_paragraph_style {
+            padding-right: 41px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        #line_separation_style {
+            width: 700px;
+            height: 0.5px;
+            background-color: #9b9a9a;
+            margin-left: 50px;
+            margin-bottom: 10px;
+        }
+
+        /*First part*/
+        #trending {
+            padding-left: 120px;
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        #trending_movies_titles {
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            color: rgba(230, 230, 230, 0.9);
+        }
+
+        #trendind_tv_title {
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            color: rgba(230, 230, 230, 0.9);
+        }
+
+        #text_movie_bottom {
+            position: relative;
+            top: -90px;
+            height: 90px;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #text_tv_bottom {
+            position: relative;
+            top: -90px;
+            height: 90px;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        .review_cast_none_style {
+            color: #000000;
+        }
+
+        #style_my_name {
+            font-style: italic;
+            color: rgba(248, 237, 237, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <!--Entire thing-->
+    <div id="holder">
+        <div class="themoviedb">THE MOVIE DB</div>
+        <!--mid section excluding heading and end-->
+        <div class="mid_child_entire_body">
+            <!--Just tabs-->
+            <div class="just_tab">
+                <button class="tabs_top" onclick="twoTabs(event,'page1_home_section')"
+                    id="the_default_tab">Home&emsp;&emsp;&emsp;&emsp;&rarr;</button>
+                <button class="tabs_top" onclick="twoTabs(event,'page2_search_section')"
+                    id="non_default_tab">Search&emsp;&emsp;&emsp;&thinsp;&thinsp;&thinsp;&rarr;</button>
+            </div>
+
+
+            <!--mid of mid:tab page sections NEW! for float left  -->
+            <div class="sections">
+                <!--Tab1 entire mid section-->
+
+                <div class="home_search_section" id="page1_home_section">
+                    <div id="trending">
+                        <div id="trending_movies_titles">Trending Movies</div>
+                        <div id="trending_movies_outer_container">
+                            <img name="trending_movie_image_tag"
+                                src="https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/movie-placeholder.jpg"
+                                alt="Trending_movies">
+                            <div id="text_movie_bottom"></div>
+                        </div>
+                        <div id="trendind_tv_title">TV Shows On-Air Today</div>
+                        <div id="trending_tv_outer_container">
+                            <img name="trending_tv_image_tag"
+                                src="https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/movie-placeholder.jpg"
+                                alt="Trending_tv">
+                            <div id="text_tv_bottom"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Tab2 entire mid section-->
+            <div class="home_search_section" id="page2_search_section">
+                <!--to append results:mid-->
+                <div class="parent_div" id="parent_di">
+                    <!--for decorations:mid-->
+                    <div class="page2_2">
+                        <br>
+                        <p id="search_title">Search</p>
+                        <form>
+                            <!--for the 2 inputs-->
+                            <div class="two_input">
+                                <label class="the_two_words" for="inputvalue">Keyword<span
+                                        class="redstar">*</span></label>
+                                <!--query-->
+                                <input type="input" id="inputvalue" size="50" class="radio_radius">
+                                <br>
+                                <br>
+                                <!--movies/tv-->
+                                <label class="the_two_words" for="movietv">Category<span
+                                        class="redstar">*</span></label>
+                                <select name="movies_or_tv" id="movietv" class="radio_radius">
+                                    <option value=""> </option>
+                                    <option value="movies">Movies</option>
+                                    <option value="tv">TV shows</option>
+                                    <option value="both">Movies and TV Shows</option>
+                                </select>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="select_buttons">
+                                <button type="submit" onclick=" clear_data_2nd_time(); clear_no_res(); click_search();"
+                                    id="button_search">
+                                    Search</button>
+                                <!--buttons-->
+                                <button type="reset" onclick="clear_data()" id="clear">Clear</button>
+                            </div>
+                        </form>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="end_credits" id="style_my_name">Designed and developed by Rengapriya Aravindan <br> Powered by TMDB
+    </div>
+
+
+    </div>
+
+    <div id="div2">
+        <div id="div3">
+
+            <div id="Backdrop_path_search_display"><img
+                    src="https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/movie-placeholder.jpg" id="" alt="">
+            </div>
+            <div id="close_design"> &times;</div>
+            <div id="Title_display_Popup"></div>
+            <div id="info_button"> <a id="info_button_display" href="" target="_blank" rel="noopener noreferrer">
+                    &#9432;</a> </div>
+            <div id="REL_GEN_STYLE"></div>
+            <div id="STAR_POPUP"></div>
+            <div id="avg_popup"></div>
+            <div id="total_votes_popup_style"></div>
+            <div id="over_popup_display"></div>
+            <div id="spoken_lang"></div>
+            <div id="cast_word">Cast</div>
+
+        </div>
+    </div>
+    <script>
+        
+        document.getElementById("div2").style.display = "none"
+
+        document.addEventListener("DOMContentLoaded", function () {
+            event.preventDefault();
+            var new_http = new XMLHttpRequest();
+            new_http.onreadystatechange = function () {
+                if ((this.readyState === 4) && (this.status === 200)) {
+                    let trending_response = this.responseText;
+                    console.log(typeof(trending_response),"rending_responserending_response");
+                    let trends = JSON.parse(trending_response);
+                    console.log(typeof(trends));
+                    let t_movies = trends.trending_movies //get movies trending object
+                    tem_mov = t_movies[0].backdrop_path
+                    if (tem_mov === null) {
+                            document.trending_movie_image_tag.src = "https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/movie-placeholder.jpg";
+                        }
+                        else {
+
+                            document.trending_movie_image_tag.src = "https://image.tmdb.org/t/p/w780" + t_movies[0].backdrop_path;
+                            document.getElementById("trending_movies_outer_container").style.opacity = "0.4"
+
+                            var ii = 0.4
+                            var dx = setInterval(function () {
+                                if (ii >= 1) clearInterval(dx)
+                                ii = ii + 0.05
+                                document.getElementById("trending_movies_outer_container").style.opacity = ii
+
+                            }, 100)
+                        }
+                        document.getElementById("text_movie_bottom").innerHTML = t_movies[0].bottom_heading_1;   
+                    ij = 1
+                    setInterval(function () {
+                        tem_move = t_movies[ij].backdrop_path
+                        if (tem_move === null) {
+                            document.trending_movie_image_tag.src = "https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/movie-placeholder.jpg";
+                        }
+                        else {
+
+                            document.trending_movie_image_tag.src = "https://image.tmdb.org/t/p/w780" + t_movies[ij].backdrop_path;
+                            document.getElementById("trending_movies_outer_container").style.opacity = "0.4"
+
+                            var ii = 0.4
+                            var dx = setInterval(function () {
+                                if (ii >= 1) clearInterval(dx)
+                                ii = ii + 0.05
+                                document.getElementById("trending_movies_outer_container").style.opacity = ii
+
+                            }, 100)
+                        }
+                        document.getElementById("text_movie_bottom").innerHTML = t_movies[ij].bottom_heading_1;
+                        if (ij < 4) {
+                            ij++
+                        }
+                        else {
+                            ij = 0
+                        }
+                    }, 5000)
+                       
+                    let t_tvs = trends.trending_tv_shows //get tv shows trending object
+
+                    tem_t = t_tvs[0].backdrop_path
+                        if (tem_t === null) {
+                            document.trending_tv_image_tag.src = "https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/movie-placeholder.jpg";
+                        }
+                        else {
+                            document.trending_tv_image_tag.src = "https://image.tmdb.org/t/p/w780" + t_tvs[0].backdrop_path;
+                            
+                            document.getElementById("trending_tv_outer_container").style.opacity= "0.4"
+                            var j = 0.4
+                            var dxc = setInterval(function () {
+                                if (j >= 1) clearInterval(dxc)
+                                j = j + 0.05
+                                //document.trending_tv_image_tag.style.opacity = j
+                                document.getElementById("trending_tv_outer_container").style.opacity = j
+
+                            }, 100)
+
+
+                        }
+                        document.getElementById("text_tv_bottom").innerHTML = t_tvs[0].bottom_heading_2;
+
+                    ko = 1;
+                    setInterval(function () {
+                        tem_tv = t_tvs[ko].backdrop_path
+                        if (tem_tv === null) {
+                            document.trending_tv_image_tag.src = "https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/movie-placeholder.jpg";
+                        }
+                        else {
+                            document.trending_tv_image_tag.src = "https://image.tmdb.org/t/p/w780" + t_tvs[ko].backdrop_path;
+
+                            document.getElementById("trending_tv_outer_container").style.opacity = "0.4"
+                            var j = 0.4
+                            var dxc = setInterval(function () {
+                                if (j >= 1) clearInterval(dxc)
+                                j = j + 0.05
+                                document.getElementById("trending_tv_outer_container").style.opacity= j
+
+                            }, 100)
+
+
+                        }
+                        document.getElementById("text_tv_bottom").innerHTML = t_tvs[ko].bottom_heading_2;
+                        if (ko < 4) {
+                            ko++
+                        }
+                        else {
+                            ko = 0
+                        }
+                    }, 5000)
+
+                    //get trending tvs object
+                }
+                else if (this.status === 404) {
+                   let djz = 1;
+                }
+                else {
+                   let djz = 1;
+                }
+
+            }
+            new_http.open("GET", "/trending/", true);
+            new_http.send();
+        });
+
+        function click_search() {
+            event.preventDefault();
+            const mkeyword = document.querySelector('#inputvalue');//query word
+            const the_keyword = mkeyword.value;
+            const searchforbutton = document.querySelector('#movietv'); //dropdown value
+            const the_dropdown = searchforbutton.value;
+
+            if (the_keyword === "" || the_dropdown === "" || the_keyword.trim() === "") {
+                alert("Please enter valid values")
+                return "no input"
+            }
+            if (the_dropdown === "movies") {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if ((this.readyState === 4) && (this.status === 200)) {
+                        var stringres = this.responseText;
+                        let d_dropdown = 1
+                        display_cards(stringres, d_dropdown)
+                    }
+                    else if (this.status === 404) {
+                       let djz = 1
+                    }
+                    else {
+                        let variable_I_will_never_use_again = 2
+                    }
+                }
+                xhttp.open("GET", "/home/" + the_keyword, true);
+                xhttp.send();
+            }
+            //###
+            else if (the_dropdown === "tv") {
+                var hppx = new XMLHttpRequest();
+                hppx.onreadystatechange = function () {
+                    if ((this.readyState === 4) && (this.status === 200)) {
+                        let all_tv_search = this.responseText;
+                        d_dropdown = 2
+                        display_cards(all_tv_search, d_dropdown)
+                    }
+                    else if (this.status === 404) {
+                        let djz = 1;
+                    }
+                    else {
+                        let variable_I_will_never_use_again = 2
+                    }
+                }
+                hppx.open("GET", "/searchtv/" + the_keyword, true);
+                hppx.send();
+            }
+            else {
+                var hptp = new XMLHttpRequest();
+                hptp.onreadystatechange = function () {
+                    if ((this.readyState === 4) && (this.status === 200)) {
+                        let all_responses = this.responseText;
+                        d_dropdown = 3
+                        display_cards(all_responses, d_dropdown)
+                    }
+                    else if (this.status === 404) {
+                        let djz = 1;
+                    }
+                    else {
+                        let variable_I_will_never_use_again = 2
+                    }
+                }
+                hptp.open("GET", "/both/" + the_keyword, true);
+                hptp.send();
+            }
+        }
+        //###########################################################################################################
+        function display_cards(stringres, dropdown) {
+            if (stringres === "No results found.") { //no results found
+                var no_results = document.createElement("div")
+                no_results.setAttribute("id", "no_result_display")
+                no_results.innerHTML = "No results found.";
+                document.getElementById("parent_di").appendChild(no_results)
+            }
+            else {
+                let om = JSON.parse(stringres); //om object js
+                //Showing results...
+                var results_will_be_ready = document.createElement("div") //showing results
+                results_will_be_ready.innerHTML = " Showing results..."
+                results_will_be_ready.setAttribute("id", "show_results_")
+                var show_len = document.getElementsByClassName("cards_search");
+                if (show_len.length === 0) {
+                    document.getElementById("parent_di").appendChild(results_will_be_ready);
+                }
+                // each card display:-
+                for (i = 0; i < Object.keys(om).length; i++) {
+
+                    var no_results1 = document.createElement("div")//div for each card
+
+                    //poster: null taken care of
+                    var initial_poster_path = "https://image.tmdb.org/t/p/w185/"
+                    p = om[i].poster_path
+                    var poster_img_s = document.createElement("img");
+                    if (p == null) { //null placeholder poster path
+                        poster_img_s.src = "https://cinemaone.net/images/movie_placeholder.png"
+                    }
+                    else {
+                        var Poster_path = initial_poster_path + p
+                        poster_img_s.src = Poster_path
+                    }
+                    poster_img_s.setAttribute("class", "Poster_path_search_display");
+
+                    //Title:null taken care of
+                    let Title = document.createElement("div");
+                    let TITLE_SENT = om[i].title
+                    Title.innerHTML = TITLE_SENT
+                    Title.setAttribute("class", "right_side"); //right side :only for positioning
+                    Title.setAttribute("id", "Title_s"); //pretty stuff in card
+
+
+                    //Release date && Genre name:null taken care of
+                    let Release_date = om[i].release_date //null already processed backend, just check
+                    if (Release_date !== "N/A") {
+                        Release_date = Release_date.substring(0, 4)
+                    }
+
+                    var genre_names = om[i].genre_name //null or not, is string, no need to process here, done backend
+                    let GENRE_SENT = genre_names
+                    var line2 = document.createElement("div")
+                    line2.innerHTML = Release_date + " | " + genre_names
+                    line2.setAttribute("class", "right_side");
+                    line2.setAttribute("id", "line2_dec");
+
+                    //id
+                    let ID_SENT = om[i].id
+
+                    //avg, votes
+                    var avg = om[i].vote_average;
+                    avg = avg / 2;
+                    let AVG_SENT_below = avg;
+                    var votes = om[i].vote_count;
+                    let vote = votes;
+                    //[star space]
+                    var star = document.createElement("div")
+                    star.innerHTML = "&#9733;" + "&thinsp;"
+                    star.setAttribute("id", "STAR")
+                    //[avg space ]
+                    var line3part1 = document.createElement("div")
+                    line3part1.innerHTML = avg + "/5 &thinsp;"
+                    line3part1.setAttribute("id", "l3part1")
+                    //[votes.string "votes"]
+                    var line3part2 = document.createElement("div")
+                    line3part2.innerHTML = votes.toString() + " votes"
+                    line3part2.setAttribute("id", "l3part2")
+
+                    //overview
+                    var over_View = document.createElement("div");
+                    let OVER_VIEW = om[i].overview
+                    over_View.innerHTML = OVER_VIEW;
+                    over_View.setAttribute("id", "over_style")
+
+                    // show more button
+                    var button_show_movies = document.createElement("button");
+                    button_show_movies.innerHTML = "Show More";
+                    button_show_movies.setAttribute("id", "button_for_show")
+
+                    //Append to parent div
+                    no_results1.appendChild(poster_img_s);
+                    no_results1.appendChild(Title);
+                    no_results1.appendChild(line2);
+                    no_results1.appendChild(star);
+                    no_results1.appendChild(line3part1);
+                    no_results1.appendChild(line3part2);
+                    no_results1.appendChild(over_View);
+                    no_results1.appendChild(button_show_movies);
+
+                    if (dropdown == 1) {
+                        button_show_movies.addEventListener("click", function () {
+                            event.preventDefault();
+                            let type_of_media = "movie"
+                            show(ID_SENT, TITLE_SENT, vote, AVG_SENT_below, OVER_VIEW, Release_date, GENRE_SENT, type_of_media)
+                        });
+                    }
+
+                    else if (dropdown == 2) {
+                        button_show_movies.addEventListener("click", function () {
+                            event.preventDefault();
+                            let type_of_media = "tv"
+                            show(ID_SENT, TITLE_SENT, vote, AVG_SENT_below, OVER_VIEW, Release_date, GENRE_SENT, type_of_media)
+                        });
+                    }
+
+                    else {
+                        if (om[i].media_type == "movie") {
+                            button_show_movies.addEventListener("click", function () {
+                                event.preventDefault();
+                                let type_of_media = "movie"
+                                show(ID_SENT, TITLE_SENT, vote, AVG_SENT_below, OVER_VIEW, Release_date, GENRE_SENT, type_of_media)
+                            });
+                        }
+                        else {
+                            button_show_movies.addEventListener("click", function () {
+                                event.preventDefault();
+                                let type_of_media = "tv"
+                                show(ID_SENT, TITLE_SENT, vote, AVG_SENT_below, OVER_VIEW, Release_date, GENRE_SENT, type_of_media)
+                            });
+
+                        }
+                    }
+
+                    no_results1.setAttribute("class", "cards_search");
+                    document.getElementById("parent_di").appendChild(no_results1)
+                }
+            }
+        }
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        function show(s_id, s_Title, s_votes, s_avg, s_over, s_release_date, s_genre, media_type) { //popup movies
+
+            {
+                if (media_type == "movie") {
+                    var MOV = new XMLHttpRequest();
+                    MOV.onreadystatechange = function () {
+                        if ((this.readyState === 4) && (this.status === 200)) {
+
+                            let pop_movies = this.responseText;
+                            display_popup(pop_movies, s_id, s_Title, s_votes, s_avg, s_over, s_release_date, s_genre, media_type)
+
+                        }
+                        else if (this.status === 404) {
+                            let djz = 1;
+                        }
+                        else {
+                            let variable_I_will_never_use = 2
+                        }
+                    }
+                    MOV.open("GET", "/TheMoviePopup/" + s_id, true);
+                    MOV.send();
+                }
+                else {
+                    var TV = new XMLHttpRequest();
+                    TV.onreadystatechange = function () {
+                        if ((this.readyState === 4) && (this.status === 200)) {
+
+                            let pop_tv = this.responseText;
+                            display_popup(pop_tv, s_id, s_Title, s_votes, s_avg, s_over, s_release_date, s_genre, media_type)
+
+                        }
+                        else if (this.status === 404) {
+                            let djz = 1;
+                        }
+                        else {
+                            let variable_I_will_never_use = 2
+                        }
+                    }
+                    TV.open("GET", "/TheTVPopup/" + s_id, true);
+                    TV.send();
+                }
+            }
+        }
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        function display_popup(poped_value, s_id, s_Title, s_votes, s_avg, s_over, s_release_date, s_genre, s_media_type) {
+            let popup_fun = JSON.parse(poped_value);
+
+            divs_b = document.getElementById("div2")
+            divs_b.style.display = "block"
+            divs_c = document.getElementById("div3")
+
+            backdrop_1 = popup_fun.backdrop_path; //backdrop:null taken care of
+            let b = document.getElementById("Backdrop_path_search_display");
+            let backdrop_image = b.getElementsByTagName("img")[0];
+            if (backdrop_1 == null) {
+                backdrop_image.src = "https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/movie-placeholder.jpg"
+            }
+            else {
+                backdrop_image.src = "https://image.tmdb.org/t/p/w780/" + backdrop_1
+            }
+
+            div_close_button = document.getElementById("close_design")
+            div_close_button.addEventListener("click", function () {
+                event.preventDefault();
+                document.getElementById("div2").style.display = "none"
+                if (actor_container.parentNode === divs_c) {
+                    divs_c.removeChild(actor_container)
+                }
+                if (review_container.parentNode === divs_c) {
+                    divs_c.removeChild(review_container)
+                }
+                if (Review_word.parentNode === divs_c) {
+                    divs_c.removeChild(Review_word)
+                }
+
+            })
+
+            title_popup_here = document.getElementById("Title_display_Popup") //title
+            title_popup_here.innerHTML = s_Title
+
+            infor_id = document.getElementById("info_button")
+            infor_button = infor_id.getElementsByTagName("a")[0]
+            if (s_media_type === "movie") {
+                let link_to_link = "https://www.themoviedb.org/movie/" + s_id.toString();
+                infor_button.href = link_to_link;
+            }
+            else {
+                let link_to_link = "https://www.themoviedb.org/tv/" + s_id.toString();
+                infor_button.href = link_to_link;
+            }
+
+
+            let RelGen_popup_movies = document.getElementById("REL_GEN_STYLE")
+            RelGen_popup_movies.innerHTML = s_release_date + " | " + s_genre
+
+            let star_popup = document.getElementById("STAR_POPUP")//popup_star
+            star_popup.innerHTML = "&#9733;" + "&thinsp;"
+            //[avg space ]
+            let avg_popup = document.getElementById("avg_popup")
+            avg_popup.innerHTML = s_avg + "/5 &thinsp;"
+            //[votes.string "votes"]
+            let total_votes_popup = document.getElementById("total_votes_popup_style")
+            total_votes_popup.innerHTML = s_votes.toString() + " votes"
+
+            let over_popup = document.getElementById("over_popup_display")
+            over_popup.innerHTML = s_over
+
+            let spoken = document.getElementById("spoken_lang")
+            spoken.innerHTML = "Spoken languages: " + popup_fun.language_string
+
+            let cast_lists = popup_fun.cast
+            actor_container = document.createElement("div")
+            actor_container.setAttribute("id", "actor_container_style")
+
+            if (cast_lists === "N/A") {
+
+                no_cast = document.createElement("div")
+                no_cast.setAttribute("class", "review_cast_none_style")
+                no_cast.innerHTML = cast_lists
+                actor_container.appendChild(no_cast)
+                divs_c.appendChild(actor_container)
+            }
+            else {
+                for (e = 0; e < Object.keys(cast_lists).length; e++) {
+                    let child = document.createElement("div")
+                    child.setAttribute("id", "child_actor_style")
+
+                    let actor_image = document.createElement("img")
+                    actor_image.setAttribute("id", "actor_image_style")
+                    if (cast_lists[e].profile_path == null) {
+                        actor_image.src = "https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/person-placeholder.png"
+                    }
+                    else {
+                        actor_image.src = "https://image.tmdb.org/t/p/w185" + cast_lists[e].profile_path
+                    }
+                    child.appendChild(actor_image)
+
+                    let actor_name = document.createElement("div")
+                    actor_name.setAttribute("id", "actor_name_style")
+                    actor_name.setAttribute("class", "three_texts")
+                    let cast_TeMp = cast_lists[e].name
+                    actor_name.textContent = cast_TeMp
+                    child.appendChild(actor_name)
+
+                    let asAs = document.createElement("div")
+                    asAs.setAttribute("class", "three_texts")
+                    asAs.innerHTML = "AS"
+                    child.appendChild(asAs)
+
+                    let character_name = document.createElement("div")
+                    character_name.setAttribute("id", "character_name_style")
+                    character_name.setAttribute("class", "three_texts")
+                    character_name.innerHTML = cast_lists[e].character
+                    child.appendChild(character_name)
+
+                    actor_container.appendChild(child)
+
+                }
+                divs_c.appendChild(actor_container)
+            }
+            let Review_word = document.createElement("div")
+            Review_word.setAttribute("id", "Review_word_style")
+            Review_word.innerHTML = "Reviews"
+            divs_c.appendChild(Review_word)
+
+            let review_lists = popup_fun.reviews
+
+            review_container = document.createElement("div")
+            review_container.setAttribute("id", "review_container_style")
+            if (review_lists === "N/A") {
+
+                let review_none = document.createElement("div")
+                review_none.innerHTML = review_lists
+                review_none.setAttribute("class", "review_cast_none_style")
+                review_container.appendChild(review_none)
+                divs_c.appendChild(review_container)
+            }
+            else {
+
+                for (bb = 0; bb < Object.keys(review_lists).length; bb++) {
+                    let each_review = document.createElement("div")
+                    each_review.setAttribute("id", "each_review_style")
+
+                    let review_username = document.createElement("div")
+                    review_username.innerHTML = review_lists[bb].username
+                    review_username.setAttribute("id", "review_username_style")
+                    each_review.appendChild(review_username)
+
+                    let review_on_date = document.createElement("div")
+                    review_on_date.innerHTML = " &thinsp; on " + review_lists[bb].created_at
+                    review_on_date.setAttribute("id", "review_on_date_style")
+                    each_review.appendChild(review_on_date)
+
+                    if (review_lists[bb].rating !== null) {
+                        let rating = document.createElement("div")
+                        rating.setAttribute("id", "rating_style")
+                        rate = review_lists[bb].rating
+                        rate = rate / 2
+                        rating.innerHTML = "&#9733; &thinsp;" + rate + " /5"
+                        each_review.appendChild(rating)
+                    }
+
+                    let review_paragraph = document.createElement("div")
+                    review_paragraph.setAttribute("id", "review_paragraph_style")
+                    review_paragraph.innerHTML = review_lists[bb].content
+                    each_review.appendChild(review_paragraph)
+
+                    let line_separation = document.createElement("div")
+                    line_separation.setAttribute("id", "line_separation_style")
+                    each_review.appendChild(line_separation)
+
+                    review_container.appendChild(each_review)
+                }
+                divs_c.appendChild(review_container)
+
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////     
+        function clear_data_2nd_time() {
+            if (document.getElementById("show_results_")) {
+                clear_data()
+            }
+        }
+
+        function clear_no_res() {
+            if (document.getElementById("no_result_display")) {
+                let none_res = document.getElementById("no_result_display")
+                none_res.parentNode.removeChild(none_res);
+            }
+        }
+
+
+        function clear_data() {
+
+            if (document.getElementById("no_result_display")) {
+                let none_res = document.getElementById("no_result_display")
+                none_res.parentNode.removeChild(none_res);
+            }
+
+            //clears show results
+
+            var clear_show = document.getElementById("show_results_");
+            clear_show.parentNode.removeChild(clear_show);
+
+            //clears cards
+            var xx = document.getElementsByClassName("cards_search");
+            while (xx.length !== 0) {
+                for (let item of xx) {
+                    item.parentNode.removeChild(item);
+                }
+            }
+        }
+
+        function twoTabs(Eve, tabName) { //function to call 2 tabs
+            let j, home_search_section_s, tabs_top;
+            home_search_section_s = document.getElementsByClassName("home_search_section");
+            for (j = 0; j < home_search_section_s.length; j++) {
+                home_search_section_s[j].style.display = "none"
+            }
+
+            tabs_top = document.getElementsByClassName("tabs_top");
+            for (j = 0; j < tabs_top.length; j++) {
+                tabs_top[j].className = tabs_top[j].className.replace(" clicked_now", " ");
+            }
+            document.getElementById(tabName).style.display = "block";
+            Eve.currentTarget.className += " clicked_now";
+        }
+        document.getElementById("the_default_tab").click();
+    </script>
+</body>
+
+</html>
