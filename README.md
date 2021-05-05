@@ -11,7 +11,7 @@ Image1: When website is opened.
 ![image](https://user-images.githubusercontent.com/78100992/117194106-8ac91400-ad98-11eb-9e29-1a9e701eb8e1.png)
 
 Image2: Search feature.
-![image](https://user-images.githubusercontent.com/78100992/117194130-93214f00-ad98-11eb-8119-1a186d2c2730.png)
+![image](https://user-images.githubusercontent.com/78100992/117196318-2e1b2880-ad9b-11eb-838c-0f8038d466ba.png)
 
 Image3: Invalid result edge cases. 
 ![image](https://user-images.githubusercontent.com/78100992/117194297-c82da180-ad98-11eb-9cad-18a03cd03a2b.png)
