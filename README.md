@@ -17,10 +17,10 @@ Image3: Invalid result edge cases.
 ![image](https://user-images.githubusercontent.com/78100992/117194297-c82da180-ad98-11eb-9cad-18a03cd03a2b.png)
 
 Image4: Show more option.
-![image](https://user-images.githubusercontent.com/78100992/117194707-425e2600-ad99-11eb-89dd-e0289fe1197b.png)
-![image](https://user-images.githubusercontent.com/78100992/117194720-4722da00-ad99-11eb-9c4b-63af018c5fbe.png)
-![image](https://user-images.githubusercontent.com/78100992/117194730-4ab66100-ad99-11eb-954e-fa870f987c15.png)
-![image](https://user-images.githubusercontent.com/78100992/117194745-4ee27e80-ad99-11eb-8253-5eefdb99dd60.png)
+![image](https://user-images.githubusercontent.com/78100992/117196131-f9a76c80-ad9a-11eb-872e-138231237e04.png)
+![image](https://user-images.githubusercontent.com/78100992/117196146-fdd38a00-ad9a-11eb-83ae-cac1c97fcfca.png)
+![image](https://user-images.githubusercontent.com/78100992/117196157-01671100-ad9b-11eb-9c72-d9b0f37de008.png)
+
 
 
 
