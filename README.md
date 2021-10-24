@@ -2,10 +2,10 @@
 
 A website that we can use to search for Movies and TV and displays the results. We can also check more information about each Movie or TV. 
 Technologies used: HTML,CSS,JavaScript, Python, JSON, Microsoft Azure  and Flask framework.
-
-[Youtube Video](https://www.youtube.com/watch?v=gfYvaNHENBk)
 The project is deployed on Microsoft Azure. 
-Website Link: https://hw6rengapriya.azurewebsites.net/
+
+#### [Youtube Video](https://www.youtube.com/watch?v=gfYvaNHENBk)
+#### Website Link: https://hw6rengapriya.azurewebsites.net/
 
 Image1: When website is opened. 
 ![image](https://user-images.githubusercontent.com/78100992/117194007-6c631880-ad98-11eb-8dbc-c359c25d8bed.png)
