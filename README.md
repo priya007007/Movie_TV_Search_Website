@@ -1,8 +1,8 @@
 # Movie TV Search Website
 
-A website that we can use to search for Movies and TV and displays the results. We can also check more information about each Movie or TV. 
-Technologies used: HTML,CSS,JavaScript, Python, JSON, Microsoft Azure  and Flask framework.
+Built a website that using TMDB API will let you search for movies and TV shows and display the results with the individual details of Movie/TV show displayed. Features include searching for a list of movies, tv show , both movies and tv shows and seeing more information about it using Show More button.
 The project is deployed on Microsoft Azure. 
+#### Technologies used: HTML,CSS,JavaScript, Python, JSON, Microsoft Azure  and Flask framework.
 
 #### [Youtube Video](https://www.youtube.com/watch?v=gfYvaNHENBk)
 #### [Website](https://hw6rengapriya.azurewebsites.net/)
