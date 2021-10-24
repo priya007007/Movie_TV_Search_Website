@@ -5,7 +5,7 @@ Technologies used: HTML,CSS,JavaScript, Python, JSON, Microsoft Azure  and Flask
 The project is deployed on Microsoft Azure. 
 
 #### [Youtube Video](https://www.youtube.com/watch?v=gfYvaNHENBk)
-#### Website Link: https://hw6rengapriya.azurewebsites.net/
+#### [Website](https://hw6rengapriya.azurewebsites.net/)
 
 Image1: When website is opened. 
 ![image](https://user-images.githubusercontent.com/78100992/117194007-6c631880-ad98-11eb-8dbc-c359c25d8bed.png)
